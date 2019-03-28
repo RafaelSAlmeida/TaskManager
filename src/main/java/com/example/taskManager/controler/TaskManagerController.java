@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.example.taskManager.dto.Task;
-import com.example.taskManager.dto.ResponseTask;
 import org.springframework.web.context.request.async.WebAsyncTask;
 
 import java.util.List;

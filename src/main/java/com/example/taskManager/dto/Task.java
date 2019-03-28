@@ -15,6 +15,8 @@ public class Task {
     private String titulo;
     private String descricao;
     private Date dataCriacao;
+    private Date dataAtualizacao;
+    private Date dataConclusao;
     private String status;
 
     public Integer getId() {
@@ -42,6 +44,16 @@ public class Task {
     public Date getDataCriacao() { return dataCriacao; }
 
     public void setDataCriacao(Date dataCriacao) { this.dataCriacao = dataCriacao; }
+
+    public Date getDataAtualizacao() { return dataAtualizacao; }
+
+    public void setDataAtualizacao(Date dataAtualizacao) { this.dataAtualizacao = dataAtualizacao; }
+
+    public Date getDataConclusao() { return dataConclusao; }
+
+    public void setDataConclusao(Date dataConclusao) {
+        this.dataConclusao = dataConclusao;
+    }
 
     public String getStatus() { return status; }
 

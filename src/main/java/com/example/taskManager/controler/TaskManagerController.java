@@ -35,4 +35,9 @@ public class TaskManagerController {
 		return new WebAsyncTask<ResponseTask>(TIMEOUT, () -> { return taskService.taskAdd(entrada); });
 	}
 
+	@RequestMapping(value = "/taskDel/{id}", method = RequestMethod.GET)
+	public WebAsyncTask<String> delTask(@PathVariable final int id) {
+		return new WebAsyncTask<String>(TIMEOUT, () -> { return taskService.delTask(id); });
+	}
+
 }

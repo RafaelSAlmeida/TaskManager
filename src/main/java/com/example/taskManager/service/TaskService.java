@@ -11,5 +11,6 @@ public interface TaskService {
     public Task getTask(int id);
     public List<Task> getAllTasks();
     public ResponseTask taskAdd(RequestTask entrada);
+    public String delTask(int id);
 
 }

@@ -47,15 +47,30 @@ public class TaskServiceImpl implements TaskService {
         }
 
         Task task = new Task();
+        task.setId(entrada.getId());
         task.setTitulo(entrada.getTitulo());
         task.setDescricao(entrada.getDescricao());
         task.setStatus(entrada.getStatus());
         task.setDataCriacao(new Date());
 
+        if(taskRepository.exists(task.getId())){
+            task.setDataAtualizacao(new Date());
+
+        }
+
+        if(task.getStatus().equals("S")){
+            task.setDataConclusao(new Date());
+
+        }
         task = taskRepository.save(task);
         responseTask.setTask(task);
         responseTask.setMensagem("success");
         return responseTask;
+    }
+
+    public String delTask(int id){
+        taskRepository.delete(id);
+        return "removed";
     }
 
 }

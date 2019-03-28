@@ -4,10 +4,17 @@ import java.io.Serializable;
 
 public class RequestTask implements Serializable {
 
+    private int id;
     private String titulo;
     private String descricao;
     private String status;
 
+
+    public int getId() { return id; }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getTitulo() {
         return titulo;
